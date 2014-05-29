@@ -1,0 +1,30 @@
+{
+  "name": "<%= _.slugify(projectName) %>",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": ">=1.2.6",
+    "angular-animate": "*",
+    "angular-bootstrap": "~0.10.0",
+    "angular-formly": "*",
+    "angular-charts": "*",
+    "angular-gesture": "~1.3.0",
+    "angular-gridster": "~0.9.7",
+    "angular-route": "*",
+    "angular-touch": "~1.2.2",
+    "bootstrap": "*",
+    "datamaps": "*",
+    "d3": "*",
+    "d3.chart": "*",
+    "Faker": "*",
+    "fontawesome": "*",
+    "jquery": ">=2.1.1",
+    "leaflet": "*",
+    "Leaflet.awesome-markers": "*",
+    "lodash": "*",
+    "momentjs": "*",
+    "numericjs": "*",
+    "pourover": "*",
+    "regression-js": "*",
+    "topojson": "*"
+  }
+}

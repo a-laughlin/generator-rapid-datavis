@@ -1,0 +1,60 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title><%= projectName %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="libs/libs-compiled.css">
+    <link rel="stylesheet" type="text/css" href="libs/bower_components/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" type="text/css" href="visualizations/visualizations-compiled.css">
+  </head>
+  <body id="dashboard">
+    <div id="wrapper" ng-app="<%= _.slugify(projectName) %>">
+      <div id="sidebar-default" class="main-sidebar fix-scroll" ng-controller="SidebarCtrl">
+        <div class="current-user">
+          RapidDatavis
+        </div>
+        <div class="menu-section">
+          <h3>Visualizations</h3>
+          <ul>
+            <div ng-repeat="vis in activeVisualizations">
+              <li class="option">
+                <a href="#" data-toggle="sidebar">
+                <i ng-class="vis.menuIconClass"></i> <span>{{vis.menuTitle}}</span>
+                </a>
+              </li>
+            </div>
+          </ul>
+        </div>
+        <div class="menu-section vis-controls">
+          <h3>Controls</h3>
+          <div ng-repeat="vis in activeVisualizations">
+            <div ng-include="vis.controlsTemplate"></div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="content">
+        <div class="content-wrapper">
+          <div class="row">
+            <div ng-repeat="vis in activeVisualizations">
+              <div ng-include="vis.contentTemplate"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="libs/libs-compiled.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="visualizations/visualizations-compiled.js"></script>
+  </body>
+</html>

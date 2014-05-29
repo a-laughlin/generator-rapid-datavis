@@ -1,0 +1,38 @@
+{
+  "name": "generator-rapid-datavis",
+  "version": "0.0.0",
+  "description": "Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "a-laughlin/generator-rapid-datavis",
+  "author": {
+    "name": "Adam Laughlin",
+    "email": "",
+    "url": "https://github.com/a-laughlin"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "~0.16.0",
+    "chalk": "~0.4.0",
+    "yosay": "^0.1.0",
+    "lodash": "~2.4.1",
+    "wrench": "~1.5.8"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  }
+}

@@ -1,24 +1,26 @@
 Yeoman Generator RapidDatavis is built to scaffold a structure for any data visualization on the web in under 30 seconds.
-Yeoman Generator RapidDatavis is built to scaffold a structure for any data visualization on the web in under 30 seconds.
 
-## Getting Started
+## Installation
  1. Install [Node.js](http://nodejs.org/)
  2. Install Yeoman and the Rapid Datavis Generator
 ```bash
 $ npm install -g yo generator-rapid-datavis
 ```
-3. Create a directory to put your project in
+
+## Getting Started
+Getting started is easy. 30 seconds is the goal after all!
+First, create a directory to store your visualizations in.
 ```bash
 $ mkdir myproject && cd myproject
-
+```
 
 ## RapidDatavis options
-Running ```$ yo rapid-datavis``` presents you with the following options:
+Second, run ```$ yo rapid-datavis```.  The RapidDatatvis generator presents you with the following options:
 
 ### Initialize project
 The default option on first run.  It creates this file structure:
 
-```
+```bash
 \---visualization_templates            // templates for your visualizations
   \---default (I'll add more of these in time)
     |---content.html                   // populates the main vis section
@@ -78,28 +80,24 @@ The default option on first run.  It creates this file structure:
       \---underscore
 ```
 
-
-
 ### New visualization from default template
 The default option on each subsequent run.  It creates a new visualization from a template you select in your visualization_templates directory.  I plan to add more templates as I port visualizations I've made into this structure.
 
+#### Seeing your visualization
+Run ```$ grunt``` to start the server and visit [http://localhost:8000](http://localhost:8000). That's it!
 
 #### Inserting your code
 Your main visualization code should go in ```static/app/visualizations/contentcontroller.js```
 Any external controls can go in ```static/app/visualizations/sidebarcontroller.js```
 
-#### Seeing your visualization
- 3 Run ```$ grunt``` to start the server.
-That's it! See your visualizations at [http://localhost:8000](http://localhost:8000)
-
 ### New template from default template
 Right now this just copies the default template
 If enough folks find this project useful, I'll work on an automated way to convert visualizations to templates and share them
 
-### New Visualization from Bower
+### New visualization from Bower
 TBD if enough folks find this project useful
 
-### New Visualiztion from Github Repo
+### New Visualiztion from Github repo
 TBD if enough folks find this project useful
 
 ## Contributing

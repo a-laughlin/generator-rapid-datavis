@@ -20,7 +20,7 @@ Second, run ```$ yo rapid-datavis```.  The RapidDatatvis generator presents you 
 ### Initialize project
 The default option on first run.  It creates this file structure:
 
-```bash
+```prose
 \---visualization_templates            // templates for your visualizations
   \---default (I'll add more of these in time)
     |---content.html                   // populates the main vis section

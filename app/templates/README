@@ -1,30 +1,28 @@
-# generator-rapid-datavis [![Build Status](https://secure.travis-ci.org/a-laughlin/generator-rapid-datavis.png?branch=master)](https://travis-ci.org/a-laughlin/generator-rapid-datavis)
-
-> [Yeoman](http://yeoman.io) generator
-
+Yeoman Generator RapidDatavis is built to scaffold a structure for any data visualization on the web in under 30 seconds.
 
 ## Getting Started
  1. Install [Node.js](http://nodejs.org/)
  2. Install Yeoman and the Rapid Datavis Generator
 ```bash
 $ npm install -g yo generator-rapid-datavis
- 3. Create a directory to put your project in
+```
+3. Create a directory to put your project in
 ```bash
 $ mkdir myproject && cd myproject
-```
- 4. Run the generator, accepting the default options
-```bash
-$ yo rapid-datavis
-```
 
-Here's the resulting file structure:
-```
 
+## RapidDatavis options
+Running ```$ yo rapid-datavis``` presents you with the following options:
+
+### Initialize project
+The default option on first run.  It creates this file structure:
+
+```
 \---visualization_templates            // templates for your visualizations
   \---default (I'll add more of these in time)
     |---content.html                   // populates the main vis section
     |---contentcontroller.js           // angular controller for main vis section
-    |---sharedservice.js               // angular service for shared sidebar/vis data
+    |---sharedservice.js               // angular service for shared visualization attributes between controllers
     |---sidebar.html                   // html for sidebar controls section
     |---sidebarcontroller.js           // angular controller for sidebar controls
     |---main.css                       // css for vis and sidebar
@@ -34,8 +32,8 @@ Here's the resulting file structure:
     |---app.js                         // minimal angular app structure
     |---index.html                     // the page you see after running grunt
     \---visualizations
-      |---visualizations-compiled.js   // after running grunt, all vis' js concat'd for faster loading
-      |---visualizations-compiled.css  // after running grunt, all vis' css concat'd for faster loading
+      |---visualizations-compiled.js   // after running grunt, all vis' js concatenated for faster loading
+      |---visualizations-compiled.css  // after running grunt, all vis' css concatenated for faster loading
       \---default                      // generated from visualization_templates/default
         |---content.html
         |---contentcontroller.js
@@ -45,14 +43,14 @@ Here's the resulting file structure:
         |---main.css
   \---data                             // your data goes here
   \---libs                             // all libs in this dir are available for use in visualizations
-    |---libs-compiled.js               // after running grunt, all libs' js concat'd for faster loading
-    |---libs-compiled.css              // after running grunt, all libs' css concat'd for faster loading
-    \---leaflet                        // maps
-    \---mapc                           // some tile sets for maps
-    \---numericjs                      // various math functions
+    |---libs-compiled.js               // after running grunt, all libs' js concatenated for faster loading
+    |---libs-compiled.css              // after running grunt, all libs' css concatenated for faster loading
+    \---leaflet                        // maps utilities (repo didn't work with bower)
+    \---mapc                           // some tile sets for maps (repo didn't work with bower)
+    \---numericjs                      // various math utility functions (repo didn't work with bower)
     \---bower_components
       \---angular                      // runs the app
-      \---angular-animate              // document the rest of these eventually.
+      \---angular-animate              // all the others provided as utilities.
       \---angular-bootstrap
       \---angular-charts
       \---angular-formly
@@ -79,11 +77,7 @@ Here's the resulting file structure:
       \---underscore
 ```
 
-## RapidDatavis options
-Running ```$ yo rapid-datavis``` presents you with the following options:
 
-### Initialize project
-The default option on first run.  It creates the file structure above.
 
 ### New visualization from default template
 The default option on each subsequent run.  It creates a new visualization from a template you select in your visualization_templates directory.  I plan to add more templates as I port visualizations I've made into this structure.

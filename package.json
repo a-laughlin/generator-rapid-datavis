@@ -1,7 +1,7 @@
 {
   "name": "generator-rapid-datavis",
   "version": "0.0.1",
-  "description": "A Yeoman generator to scaffold any web-viewable data visualization in under 30 seconds.",
+  "description": "Scaffold a structure for web-viewable data visualizations in under 30 seconds.  Ideal for rapid prototyping scenarios like hackathons.",
   "keywords": [
     "yeoman-generator",
     "angularjs",

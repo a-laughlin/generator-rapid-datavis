@@ -45,13 +45,13 @@ module.exports = function (grunt) {
           '<%%= dirs.bower %>jquery/dist/jquery.min.js',
           '<%%= dirs.bower %>jquery-ui/ui/minified/jquery-ui.min.js',
           '<%%= dirs.libs %>leaflet/dist/leaflet.js', // had to manually insert this because the author didn't put it in the repo
-          '<%%= dirs.bower %>Leaflet.awesome-markers/dist/leaflet.awesome-markers.min.min',
+          '<%%= dirs.bower %>Leaflet.awesome-markers/dist/leaflet.awesome-markers.min.js',
           '<%%= dirs.bower %>momentjs/min/moment.min.js',
           '<%%= dirs.libs %>numericjs/numeric-1.2.6.min.js', // had to manually insert this because the author didn't put it in the repo
           '<%%= dirs.bower %>lodash/dist/lodash.underscore.min.js', // temp.  Replace with lodash.min.js in same dir after merge - https://github.com/NYTimes/pourover/pull/14
           '<%%= dirs.bower %>pourover/pourover.js', // temp.  Replace with lodash.min.js in same dir after merge - https://github.com/NYTimes/pourover/pull/14
           '<%%= dirs.bower %>regression-js/build/regression.min.js',
-          '<%%= dirs.bower %>topojson/topojson.js', // temp.  Replace with lodash.min.js in same dir after merge - https://github.com/NYTimes/pourover/pull/14
+          '<%%= dirs.bower %>topojson/topojson.js' // temp.  Replace with lodash.min.js in same dir after merge - https://github.com/NYTimes/pourover/pull/14
         ],
         dest:'<%%= dirs.libs %>libs-compiled.js'
       },
@@ -60,7 +60,7 @@ module.exports = function (grunt) {
           '<%%= dirs.bower %>bootstrap/dist/css/bootstrap.min.css',
           '<%%= dirs.bower %>bootstrap/dist/css/bootstrap-theme-min.css',
           '<%%= dirs.libs %>leaflet/dist/leaflet.css',
-          '<%%= dirs.bower %>Leaflet.awesome-markers/dist/leaflet.awesome-markers.css',
+          '<%%= dirs.bower %>Leaflet.awesome-markers/dist/leaflet.awesome-markers.css'
         ],
         dest:'<%%= dirs.libs %>libs-compiled.css'
       },
@@ -85,9 +85,15 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      frontendfiles: {
-        files:  [ 'static/app/**/*','!**/*-compiled*'],
+      compiled_files: {
+        files:  [ 'static/app/**/*{css,js}','!**/*-compiled*'],
         tasks:  [ 'clean:vis_jscss', 'concat:vis_js','concat:vis_css' ],
+        options: {
+          livereload:true
+        }
+      },
+      non_compiled_files:{
+        files:  [ '**/*.html','static/app/app.{css,js}'],
         options: {
           livereload:true
         }

@@ -1,0 +1,4 @@
+/* Any css for your visualization or controls section go here.
+ * Prefixing all entries like so is recommended:
+ * .<%= _.slugify(visName) %> foo {color:pink;}
+ */

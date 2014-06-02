@@ -3,11 +3,11 @@ app.service('<%= _.classify(visName) %>Service', ['$rootScope', function($rootSc
     "menuTitle":"<%= visName %>",
     "menuIconClass":"fa fa-calendar-o",
     "pubsubNamespace":"<%= _.slugify(visName) %>",
-    "controlsTemplate":"<%= _.slugify(visName) %>_controls.html",
-    "contentTemplate":"<%= _.slugify(visName) %>_content.html",
-    "contentController":"<%= _.slugify(visName) %>_content_ctrl.js",
-    "controlsController":"<%= _.slugify(visName) %>_controls_ctrl.js",
-    "sharedService":"<%= _.slugify(visName) %>_service.js",
+    "controlsTemplate":"/visualizations/<%= _.slugify(visName) %>/sidebar.html",
+    "contentTemplate":"/visualizations/<%= _.slugify(visName) %>/content.html",
+    "contentController":"/visualizations/<%= _.slugify(visName) %>/contentcontroller.js",
+    "controlsController":"/visualizations/<%= _.slugify(visName) %>/sidebarcontroller.js",
+    "sharedService":"/visualizations/<%= _.slugify(visName) %>/sharedservice.js"
   };
   return serviceData;
 }])

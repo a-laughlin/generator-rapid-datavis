@@ -1,4 +1,5 @@
-Yeoman Generator RapidDatavis is built to scaffold a structure for any data visualization on the web in under 30 seconds.
+#RapidDatavis Yeoman Generator
+Scaffold a structure for any data visualization on the web in under 30 seconds.  Ideal for rapid prototyping scenarios like hackathons.
 
 ## Installation
  1. Install [Node.js](http://nodejs.org/)
@@ -82,6 +83,8 @@ The default option on first run.  It creates this file structure:
 
 ### New visualization from default template
 The default option on each subsequent run.  It creates a new visualization from a template you select in your visualization_templates directory.  I plan to add more templates as I port visualizations I've made into this structure.
+
+Right now there's just a blank template with utility files like leaflet and d3 loaded.  More templates to come.
 
 #### Seeing your visualization
 Run ```$ grunt``` to start the server and visit [http://localhost:8000](http://localhost:8000). That's it!
